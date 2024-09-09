@@ -20,11 +20,15 @@ public class Main {
         mijnReis.simuleerReis(vervoer);                   // Met fiets
         mijnReis.simuleerReis(new AutoVervoerStrategy()); // Met auto
         mijnReis.simuleerReis(new OVVervoerStrategy());   // Met OV
+        mijnReis.simuleerReis(new PaardVervoerStrategy()); //Met paard
 
         System.out.println("Met <nieuw> vervoer (Stap 2)  ");
         System.out.println("TODO:");
 
         System.out.println("Met <nieuw> vervoer, lambda edition! (Stap 5)");
         System.out.println("TODO:");
+
+        VervoerStrategy teleportatieLambda = (isReisTijdensSpits) -> 0; //Lambda
+        mijnReis.simuleerReis(teleportatieLambda); // Met teleportatieLambda object
     }
 }
