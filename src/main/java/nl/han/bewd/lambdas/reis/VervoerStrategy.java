@@ -5,6 +5,7 @@ VervoerStrategy heeft een enkele methode voor het berekenen van de reistijd. Afs
 Alleen of de reis in de spits is kan meegenomen worden in de berekening.
  */
 @FunctionalInterface
+//Een FunctionalInterface mag geen 2 abstracte methodes hebben.
 public interface VervoerStrategy {
     int berekenReistijd(boolean isReisTijdensSpits) ;
 }
